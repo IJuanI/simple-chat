@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Client compile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "src/chat.cpp",
+                "src/internal/messenger.cpp",
+                "src/internal/base.cpp",
+                "src/exceptions/messages.cpp",
+                "src/comms/communication.cpp",
+                "src/comms/local/comms.cpp",
+                "src/comms/local/threads.cpp",
+                "-Isrc",
+                "-Wall",
+                "-o chat.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
